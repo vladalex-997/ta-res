@@ -1,21 +1,23 @@
-import Image from "next/image";
+import Header from "../.vscode/components/common/header/Header";
 
-export default function Home() {
-  return (
-  <div>
-  Hello  <i className="fa-solid fa-house"></i>
-    <img src="/images/logo.jpg" alt="Alt" />
+export default function Home(){
+  return(
+<div>
 
-<button className="button button-primary">Button Primary</button>
+<header className="header container mt-5">
+<Header></Header>
+</header>
 
-<button className="button button-primary button-large">Button primary Large</button>
+<main className="content">
 
-<a className="button button-primary">Button Primary</a>
+</main>
 
-<a className="button button-primary button-large">Button primary Large</a>
+<footer className="footer">
 
+</footer>
 
+</div>
 
-  </div>
   );
+
 }
