@@ -24,6 +24,7 @@
   }
 
   .footer-nav {
+    text-transform: uppercase;
     display: flex;
     flex-wrap: wrap;
     row-gap: 43px;
@@ -49,9 +50,44 @@
 
   .footer-contact {
     grid-area: contact;
+
+    h1 {
+      font-size: 20px;
+      font-weight: 300;
+      text-transform: uppercase;
+      span {
+        font-weight: 500;
+      }
+    }
+
+    a[href^='tel:'] {
+      display: block;
+    }
+
+    a[href^='mailto:'] {
+      color: $brand-primary;
+    }
   }
 
   .footer-support {
     grid-area: support;
+    text-transform: uppercase;
+    display: inline-block;
+
+    li {
+      display: inline-block;
+      text-align: center;
+
+      &:nth-child(2) {
+        margin: 16px;
+      }
+    }
+
+    i[class*='fa-'] {
+      color: $brand-primary;
+      font-size: 40px;
+      display: block;
+      margin-bottom: 4px;
+    }
   }
 }

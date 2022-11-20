@@ -1,0 +1,23 @@
+.nav-secondary {
+  margin-top: 10px;
+  text-align: center;
+
+  ul {
+    display: inline-flex;
+    gap: 40px;
+    text-transform: uppercase;
+    line-height: 17px;
+    font-size: 14px;
+    font-weight: 300;
+
+    a {
+      // padding: 8px 16px;
+      // border-radius: 24px;
+      transition: color 0.2s linear;
+
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+  }
+}

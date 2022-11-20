@@ -1,4 +1,5 @@
 .product-tile {
+  text-align: center;
   &-image {
     position: relative;
 
@@ -11,5 +12,36 @@
       top: 16px;
       right: 16px;
     }
+  }
+
+  &-title {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 25px;
+  }
+
+  &-subtitle {
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  &-pricing {
+    font-size: 25px;
+  }
+
+  &-footer {
+    margin-top: 10px;
+  }
+}
+
+.product-price {
+  color: $brand-primary;
+  font-size: 35px;
+
+  &-regular {
+    display: block;
+    text-decoration: line-through;
+    color: unset;
+    font-size: 30px;
   }
 }
