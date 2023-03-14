@@ -1,20 +1,23 @@
 import Link from 'next/link';
 
-export default function ProductTile(){
+export default function ProductTile(props) {
+  // product = props.product;
+  const { product } = props;
+  const { imageUrl } = product;
+
   return (
-  <article className="product-tile">
-    <header className="product-tile-header">
-
-    <div className="product-tile-image">
-    <Link href="/" title="Thread affair traveller suit">
+    <article className="product-tile">
+      <header className="product-tile-header">
+        <div className="product-tile-image">
+          <Link href="/" title="Thread affair traveller suit">
             <picture>
-              <img src="/images/products/product-01a.jpg" alt="Suit"></img>
+              <img src={imageUrl} alt="Suit"></img>
             </picture>
-    </Link>
-      <span className="badge">%</span>
-    </div>
+          </Link>
+          <span className="badge">%</span>
+        </div>
 
-    <h1 className="product-tile-title">
+        <h1 className="product-tile-title">
           <Link href="/" title="Thread Affair Traveller Suit">
             Thread Affair Traveller Suit
           </Link>
@@ -24,19 +27,19 @@ export default function ProductTile(){
             London fit semi slim
           </Link>
         </h2>
-    </header>
+      </header>
 
-    <section className="product-tile-pricing">
-    <span className="product-price-regular">399.00</span>
+      <section className="product-tile-pricing">
+        <span className="product-price-regular">399.00</span>
 
-    <span className="product-price">USD 270.00</span>
-    </section>
+        <span className="product-price">USD 270.00</span>
+      </section>
 
-    <footer className="product-tile-footer">
-    <button className="button" title="Add to Cart" type="button">
-      Add to Cart
-    </button>
-    </footer>
-  </article>
+      <footer className="product-tile-footer">
+        <button className="button" title="Add to Cart" type="button">
+          Add to Cart
+        </button>
+      </footer>
+    </article>
   );
 }
